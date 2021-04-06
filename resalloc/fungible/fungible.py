@@ -62,12 +62,6 @@ class AllocationProblem(object):
         self.a_denom = self.a_rhs - self.a_lhs
         self.a_denom_zero_mask = self.a_denom == 0
 
-        if (self.a_denom == 0).any():
-            print(
-                "Warning: some rows of the throughput matrix "
-                "have duplicated entries."
-            )
-
         self.a_min = torch.min(self.a_lhs, self.a_rhs)
         self.a_max = torch.max(self.a_lhs, self.a_rhs)
 
