@@ -346,4 +346,6 @@ def _solve(
     stats.throughputs = throughputs
     stats.resource_usage = resource_usage
 
+    problem.prices = prices[1:]
+
     return prices, stats
